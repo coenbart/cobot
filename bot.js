@@ -17,9 +17,10 @@ client.on('message', message => {
   	}
 });
 
-client.on('ready', () => {
-    var generalChannel = client.channels.get("1") // Replace with known channel ID
-    generalChannel.send("2")  
+client.on('message', message => {
+    if (message.content === '1') {
+    	message.send('2');
+  	}
 });
 
 // THIS  MUST  BE  THIS  WAY
