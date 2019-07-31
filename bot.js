@@ -19,7 +19,7 @@ client.on('message', message => {
 
 client.on('message', message => {
     if (message.content === '1') {
-    	message.send('2');
+    	message.channel.sendMessage('2');
   	}
 });
 
