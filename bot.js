@@ -7,7 +7,7 @@ client.on('ready', () => {
 
 client.on('message', message => {
     if (message.content === 'ping') {
-    	message.send('pong');
+    	message.reply('pong');
   	}
 });
 
@@ -15,6 +15,11 @@ client.on('message', message => {
     if (message.content === 'go') {
     	message.reply('ahead, mr joestar');
   	}
+});
+
+const m = await message.channel.send("Ping?");
+    m.edit(`Pong! Latency is ${m.createdTimestamp - message.createdTimestamp}ms. API Latency is ${Math.round(client.ping)}ms`);
+  }
 });
 
 // THIS  MUST  BE  THIS  WAY
