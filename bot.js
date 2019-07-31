@@ -18,9 +18,8 @@ client.on('message', message => {
 });
 
 client.on('message', message => {
-    if (message.content === '1') {
-    	message.channel.sendMessage('2') {
-            message.channel.deleteMessage('1');
+    if (message.content === 'Помощь') {
+    	message.channel.sendMessage('```Прошу, вот список команд```');
   	}
 });
 
